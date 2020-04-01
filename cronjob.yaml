@@ -1,0 +1,20 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: kakakakakku
+spec:
+  schedule: "*/1 * * * *"
+  concurrencyPolicy: Forbid
+  suspend: false
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: sleep
+            image: busybox
+            args:
+            - /bin/sh
+            - -c
+            - date; sleep "300"; date
+          restartPolicy: OnFailure
