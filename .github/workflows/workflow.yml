@@ -1,0 +1,12 @@
+name: Workflow
+on: push
+jobs:
+  kubeval:
+    name: kubeval
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: kubeval
+      uses: instrumenta/kubeval-action@master
+      with:
+        files: './cronjob.yaml'
