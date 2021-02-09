@@ -9,4 +9,4 @@ jobs:
     - name: kubeval
       uses: instrumenta/kubeval-action@master
       with:
-        files: './cronjob.yaml'
+        files: sandbox-cronjob
