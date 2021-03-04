@@ -1,0 +1,9 @@
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: sandbox-drain-timeout-pdb
+spec:
+  minAvailable: 4
+  selector:
+    matchLabels:
+      app: nginx
