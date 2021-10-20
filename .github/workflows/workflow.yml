@@ -7,6 +7,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: kubeval
-      uses: instrumenta/kubeval-action@master
+      uses: docker://garethr/kubeval
       with:
-        files: sandbox-cronjob
+        args: --directories .
