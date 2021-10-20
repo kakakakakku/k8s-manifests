@@ -8,5 +8,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: kubeval
       uses: docker://garethr/kubeval
-      with:
-        args: "--directories . --ignored-filename-patterns 'kustomization.yaml'"
+      args: "--directories . --ignored-filename-patterns 'kustomization.yaml'"
