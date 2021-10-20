@@ -9,4 +9,4 @@ jobs:
     - name: kubeval
       uses: docker://garethr/kubeval
       with:
-        args: --directories .
+        args: --directories . --ignored-filename-patterns 'kustomization.yaml'
