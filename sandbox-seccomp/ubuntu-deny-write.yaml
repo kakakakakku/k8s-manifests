@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-deny-write
+spec:
+  securityContext:
+    seccompProfile:
+      type: Localhost
+      localhostProfile: profiles/deny-write.json
+  containers:
+    - name: ubuntu
+      image: ubuntu:21.10
+      command:
+        - sleep
+        - infinity
